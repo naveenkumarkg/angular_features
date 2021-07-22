@@ -1,0 +1,40 @@
+<div class="login">
+  <h2 class="login-header">Login in</h2>
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit(myForm.value)"
+    class="login-container"
+  >
+    <p>
+      <input
+        autocomplete="off"
+        type="text"
+        name="email"
+        formControlName="email"
+        placeholder="email"
+      />
+    </p>
+    <p
+      class="errors"
+      *ngIf="
+        myForm.controls.email.touched && myForm.controls.email.errors?.email
+      "
+    >
+      Please Fill valid email address
+    </p>
+    <p>
+      <input
+        type="password"
+        name="password"
+        formControlName="password"
+        placeholder="password"
+      />
+    </p>
+    <p *ngIf="myForm.controls.password.hasError('minlength')" class="errors">
+      Enter min 8 char
+    </p>
+    <p>
+      <button [disabled]="!myForm.valid" type="submit">Sign In</button>
+    </p>
+  </form>
+</div>
