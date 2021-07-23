@@ -1,7 +1,8 @@
 <nav *ngIf="authService.isAuthenticate">
     <ul>
         <li><a (click)="logout()">Logout</a> </li>
-        <li>Dashboard</li>
+        <li><a routerLink="dashboard">Dashboard</a> </li>
+        <li ><a routerLink="customerList">Customer List</a></li>
 
     </ul>
 </nav>

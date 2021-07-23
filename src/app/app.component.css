@@ -14,3 +14,14 @@ nav ul {
 nav ul li{
     margin: 0 5px 0 5px;
 }
+
+nav ul li a{
+    color:azure;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color:azure;
+    background-color:black;
+    text-decoration: none;
+}

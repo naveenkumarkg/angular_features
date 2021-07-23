@@ -1,0 +1,22 @@
+<!-- <button (click)="callData()">Call Api</button> -->
+
+<!-- {{employeeList | json}} -->
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Company</th>
+  </tr>
+  <tr *ngFor="let item of employeeList">
+    <td>{{ item?.id }}</td>
+    <td>{{ item?.name }}</td>
+    <td>{{ item?.website }}</td>
+    <td>{{ item?.email }}</td>
+    <td>{{ item?.phone }}</td>
+    <td>{{ item?.company?.name }}</td>
+  </tr>
+</table>
